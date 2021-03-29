@@ -37,7 +37,7 @@ registerUserRoute.post("/register", (req, res) => {
     var verificationMailCode = randomAlphaNumeric(6);
 
     // Verification Url
-    var verificationUrl = `http://localhost:3000/verifymail?email=${email}&code=${verificationMailCode}`;
+    var verificationUrl = `https://tekcareapp.herokuapp.com/verifymail?email=${email}&code=${verificationMailCode}`;
 
     // Add new user to database if user does not exist and user is not verified
     var insertUser = `INSERT INTO users(name,email,password,verification_code) 
