@@ -1,7 +1,7 @@
 const mysql = require("mysql");
 
 const mysqlConnection = mysql.createPool({
-  host: "127.0.0.1",
+  host: "https://tekcareapp.herokuapp.com",
   user: "root",
   password: "",
   database: "tekcare",
