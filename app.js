@@ -59,9 +59,9 @@ app.get("*", function(req, res) {
 });
 
 // host environment
-const myhost = process.env.HOST || "localhost";
+// const myhost = process.env.HOST || "localhost";
 
 // connect With HTTP and listen On Port 8080 or Available PORT
-http.listen(process.env.PORT || 3000, myhost, () => {
+http.listen(process.env.PORT || 3000, /* myhost, */ () => {
     console.log("running on port 3000");
 });
