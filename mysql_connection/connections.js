@@ -33,6 +33,12 @@ mysqlConnection.query(createUsers,function(err,results){
   console.log("Table Created !!!");
 });
 
+mysqlConnection.end(function(err){
+  if(err){
+    return console.log(err.message);
+  }
+});
+
 });
 
 // mysqlConnection.on("connection", function (connection) {
