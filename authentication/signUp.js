@@ -53,7 +53,7 @@ registerUserRoute.post("/register", (req, res) => {
     // Insert user into database
     mysqlConnection.query(verifyQuery, (err, rows, cols) => {
         console.log("rows: ", rows)
-        if (rows.length > 0) {
+        if (rows) {
             if (rows[0].email_verified === 1) {
                 console.log("row verified === 1");
                 // res.send({ "msg": "user already exist", "id": id })

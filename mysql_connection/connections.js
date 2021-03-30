@@ -28,7 +28,7 @@ mysqlConnection.connect(function(err){
     verification_code varchar(10)
 )`;
 
-mysqlConnection.query(createUsers,function(err,results){
+mysqlConnection.query(createUsers,function(err,results,fields){
   if(err) throw err;
   console.log("Table Created !!!");
 });
