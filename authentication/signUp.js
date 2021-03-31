@@ -17,9 +17,9 @@ registerUserRoute.post("/register", (req, res) => {
     // const user = { name: name, password: password, email: email };
 
     //console.log(user);
-    //console.log(email);
-    //console.log(password);
-    //console.log(name);
+    console.log(email);
+    console.log(password);
+    console.log(name);
 
 
 
@@ -52,8 +52,9 @@ registerUserRoute.post("/register", (req, res) => {
 
     // Insert user into database
     mysqlConnection.query(verifyQuery, (err, rows, cols) => {
-        console.log("rows: ", rows)
-        if (rows) {
+        if (rows.length > 0) {
+            console.log("rows: ", rows)
+        
             if (rows[0].email_verified === 1) {
                 console.log("row verified === 1");
                 // res.send({ "msg": "user already exist", "id": id })
@@ -70,7 +71,7 @@ registerUserRoute.post("/register", (req, res) => {
                 res.send("USER_EXISTS_BUT_NOT_VERIFIED");
             }
         } else {
-            console.log("no user yet so added");
+            console.log("USER YET TO BE ADDED");
 
 
 
