@@ -9,8 +9,8 @@ var sendVerificationMail = function(verificationUrl, userEmail, theusername) {
         pool: true,
         //service: 'gmail',
         auth: {
-           user: process.env.APP_EMAIL,
-           password: process.env.APP_PASS,
+            user: 'ekyeremeh7@gmail.com', // change to their email 
+            pass: "jsturwesaijlviqw" //google-app-sign-in-email password 
         },
         //secureConnection: 'false',
         tls: {
@@ -20,7 +20,11 @@ var sendVerificationMail = function(verificationUrl, userEmail, theusername) {
 
 
 
-  
+    //rentersparadise6@gmail.com
+    //owiulyyijykxiywr
+
+    //ekyeremeh7@gmail.com
+    //jsturwesaijlviqw
 
     // Send email containing HTML:
     var mailOptions = {
